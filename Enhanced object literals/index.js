@@ -9,6 +9,7 @@ const Introduce = {
 }
 console.log(Introduce);
 
+
 // VD2
 var tencv = 'TenCV';
 var luong = 'Luong';
@@ -30,6 +31,7 @@ function arrToObj(arr) {
     })
     return ob; // trả về đối tượng kết quả đã được tạo
 }
+
 
 
 
