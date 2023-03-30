@@ -22,6 +22,7 @@ const tenCongty = {
 console.log(tenCongty)
 
 // Bài Tập Enhanced object literals F8
+// Cho trước mảng infoArr, hãy viết hàm arrToObj để chuyển array thành object.
 function arrToObj(arr) {
     let ob = {} // khởi tạo đối tượng kết quả là một đối tượng rỗng
     arr.forEach((value) => { // duyệt qua mỗi phần tử của mảng arr bằng forEach
@@ -29,4 +30,9 @@ function arrToObj(arr) {
     })
     return ob; // trả về đối tượng kết quả đã được tạo
 }
+
+
+
+
+
 
