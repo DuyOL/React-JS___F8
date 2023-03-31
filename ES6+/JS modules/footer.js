@@ -1,7 +1,7 @@
 // logger.js
-const logger = {
+const footer = {
     log: function (message) {
         console.log(message);
     }
 };
-export default logger;
+export default footer;
