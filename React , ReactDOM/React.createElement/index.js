@@ -33,8 +33,6 @@ liDOM2.innerText = 'React JS';
 ulDOM.appendChild(liDOM1);
 ulDOM.appendChild(liDOM2);
 document.body.appendChild(ulDOM);
-
-
 // React --> React DOM
 const ulReact = React.createElement(
     'ul',
@@ -46,8 +44,6 @@ const ulReact = React.createElement(
     React.createElement('li', null, 'Fluter'),
 )
 console.log(ulReact);
-
-
 // Bài Tập F8
 /* <div class="post-item">
     <h2 title="Học React tại F8">Học React JS</h2>
@@ -58,13 +54,13 @@ console.log(ulReact);
 const divDOM = document.createElement('div')
 divDOM.className = 'post-item'
 
-const divDOMH2 = document.createElement('H2')
-divDOMH2.title = 'Hoc Lap Trinh tai F8'
-divDOMH2.innerText = 'React JS'
+const divDOMH2 = document.createElement('h2')
+divDOMH2.title = 'Hoc React Tai F8'
+divDOMH2.innerText = 'Hoc React JS'
 divDOM.appendChild(divDOMH2)
 
 const divDOMP = document.createElement('p')
-divDOMP.innerText = 'Học React JS từ cơ bản đến nâng cao'
+divDOMP.innerText = 'Hoc React JS tu co ban den nang cao'
 divDOM.appendChild(divDOMP)
 
 document.body.appendChild(divDOM)
@@ -74,10 +70,8 @@ const divReact = document.createElement('div', {
     className: 'post-item'
 },
     React.createElement('h2', {
-        title: 'Hoc Lap Trinh Tai F8'
-    }, "Hoc React"),
-    React.createElement('p', null, 'Hoc Lap Trinh Tu Co Ban den nang cao')
+        title: 'Hoc React tai F8'
+    }, 'Hoc ReactJS'),
+    React.createElement('p', {}, 'Hoc React JS tu co ban den nang cao')
 )
 console.log(divReact)
-
-
