@@ -17,18 +17,25 @@ const divDOMP = document.createElement('p')
 divDOMP.innerText = 'Hoc React JS tu co ban den nang cao'
 divDOM.appendChild(divDOMP)
 
-document.body.appendChild(divDOM)
+const titleH1 = document.createElement('h1')
+titleH1.title = 'Hello James'
+titleH1.innerText = 'Hello Duy'
+titleH1.style = 'color:red'
+divDOM.appendChild(titleH1)
 
-// Giải Bằng React JS
-const divReact = document.createElement('div', {
-    className: 'post-item'
-},
-    React.createElement('h2', {
-        title: 'Hoc React tai F8'
-    }, 'Hoc ReactJS'),
-    React.createElement('p', {}, 'Hoc React JS tu co ban den nang cao')
-)
-// Get root Element
+const menu = document.createElement('ul')
+
+const li = document.createElement('li')
+li.innerText = 'JavaScript'
+
+const li2 = document.createElement('li')
+li2.innerText = 'PHP'
+
+menu.appendChild(li)
+menu.appendChild(li2)
+document.body.appendChild(menu)
+
+// Duới đây là 2 dòng code : getElementById vào trong thẻ root
 const root = document.getElementById('root');
-// React DOM
-ReactDOM.render(divReact, root);
+root.appendChild(divDOM);
+// document.body.appendChild(divDOM)
