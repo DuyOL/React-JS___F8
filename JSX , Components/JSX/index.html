@@ -28,14 +28,17 @@
         ]
         const ul =
             <ul>
-                {
-                    reactCourse.map(function (reactCourse) {
-                        return <li>{reactCourse.name}</li>
-                    })
-                }
+                {reactCourse.map(reactCourse =>
+                    React.createElement('li', null, reactCourse.name)
+                )}
             </ul>
         ReactDOM.render(ul, document.getElementById('root'))
     </script>
 </body>
 
 </html>
+<!-- {
+reactCourse.map(function (reactCourse) {
+return <li>{reactCourse.name}</li>
+})
+} -->
