@@ -1,0 +1,2 @@
+### Fragment trong React Là gì ?
+ - Fragment trong React là một tính năng giúp tạo ra các thành phần UI mà không cần phải tạo thêm các nút DOM không cần thiết. Nó cho phép nhóm một tập hợp các thành phần UI lại với nhau, mà không cần tạo ra một nút DOM bổ sung trong cây phân cấp.
