@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập F8</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        function Postitem() {
+            return (
+                <h2 className="post - title"> Tuơng Tác Với ReactJS</h2>
+            )
+        }
+        function Postdesc() {
+            return (
+                <p className="post-desc">Bạn có kiến thức về JavaScript</p>
+            )
+        }
+        class PostPublished extends React.Component {
+            render() {
+                return (
+                    <p className="post-published">Bạn có Kiến Thức Về React JS</p>
+                )
+            }
+        }
+        const app = (
+            <div className="posts-list">
+                <div className="post-item">
+                    <img src="https://react.dev/images/home/conf2021/cover.svg" alt="" />
+                    <Postitem />
+                    <Postdesc />
+                    <PostPublished />
+                </div>
+                <div className="post-item">
+                    <img src="https://react.dev/images/home/conf2021/cover.svg" alt="" />
+                    <Postitem />
+                    <Postdesc />
+                    <PostPublished />
+                </div>
+                <div className="post-item">
+                    <img src="https://react.dev/images/home/conf2021/cover.svg" alt="" />
+                    <Postitem />
+                    <Postdesc />
+                    <PostPublished />
+                </div>
+            </div>
+        )
+        ReactDOM.render(app, document.getElementById('app'))
+    </script>
+</body>
+
+</html>
