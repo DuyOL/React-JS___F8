@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Element types</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function PostItem({
+            image,
+            title,
+            description,
+            publicshed,
+        }) {
+            return (
+                <div className="PostItem">
+                    <img
+                        src={image}
+                    />
+                    <h2 style={{ color: 'red' }} className="post-title">{title}</h2>
+                    <p style={{ color: 'blue' }} className="post-decs">{description}</p>
+                    <p style={{ color: 'green' }} className="post-publicshed">{publicshed}</p>
+                </div>
+            )
+        }
+        function App() {
+            return (
+                <div id="wrapper">
+                    <PostItem
+                        title="1 Ma Túy Rất Có Hại Cho Sức Khỏe ? "
+                        image="https://vinmec-prod.s3.amazonaws.com/images/20200206_050340_555197_nguyen_tac_cac_phuo.max-1800x1800.jpg"
+                        description=" Tôi Nghe nói những ai hút ma túy sẽ chết sớm"
+                        publicshed="Và Tiêu tốn tiền bạc của Gia Đình"
+                    />
+                    <PostItem
+                        title=" 2 Ma Túy Rất Có Hại Cho Sức Khỏe ? "
+                        image="https://vinmec-prod.s3.amazonaws.com/images/20200206_050340_555197_nguyen_tac_cac_phuo.max-1800x1800.jpg"
+                        description=" Tôi Nghe nói những ai hút ma túy sẽ chết sớm"
+                        publicshed="Và Tiêu tốn tiền bạc của Gia Đình"
+                    /><PostItem
+                        title=" 3 Ma Túy Rất Có Hại Cho Sức Khỏe ? "
+                        image="https://vinmec-prod.s3.amazonaws.com/images/20200206_050340_555197_nguyen_tac_cac_phuo.max-1800x1800.jpg"
+                        description=" Tôi Nghe nói những ai hút ma túy sẽ chết sớm"
+                        publicshed="Và Tiêu tốn tiền bạc của Gia Đình"
+                    />
+
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+</body>
+
+</html>
