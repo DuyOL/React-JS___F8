@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+    <title>Render Props</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function Courses({ data, children }) {
+            return (
+                <ul>
+                    {
+                        data.map((...props) => children(...props))
+                    }
+                </ul>
+            )
+        }
+        function App() {
+            const Player = ['Vannisteroy', 'Vinisius', 'Cristiano Ronalo']
+            return (
+                <div id="wrapper">
+                    <Courses data={Player}>
+                        {
+                            (item, index) => <li key={index}>{item}</li>
+                        }
+                    </Courses>
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+</body>
+
+</html>

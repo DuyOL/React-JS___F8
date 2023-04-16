@@ -9,11 +9,23 @@
     <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        .button-style {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <div id="root"></div>
-
     <script type="text/babel">
 
         function Button({ title, href, onClick }) {
@@ -27,15 +39,17 @@
                 props.onClick = onClick
             }
             return (
-                <Component {...props}>{title}</Component>
+                <Component {...props} className="button-style">{title}</Component>
             )
         }
         function App() {
+            const title = "Đừng Nhấn Vào"
+            const href = "https://hentaiz.io/"
             return (
                 <div className="wrapper">
                     <Button
-                        title="Hello Would"
-                        href="https://fullstack.edu.vn/learning/reactjs?id=f106ce66-7cfa-4963-94ad-81e96945a576"
+                        title={title}
+                        href={href}
                         onClick={() => console.log(Math.random())}
                     />
                 </div>
